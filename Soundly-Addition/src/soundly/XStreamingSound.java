@@ -89,7 +89,7 @@ public class XStreamingSound extends XSound {
 		try {
 			if (format.toLowerCase().equals("ogg")) {
 				streamPlayer = new XOpenALStreamPlayer(source, stream);
-			} else if (format.toLowerCase().equals(".xm") || format.toLowerCase().equals(".mod")) {
+			} else if (format.toLowerCase().equals("xm") || format.toLowerCase().equals("mod")) {
 				if (SoundStore.get().isDeferredLoading())
 					Log.warn("Deferred loading for MOD is not supported; loading immediately");
 				modPlayer = new OpenALMODPlayer();

@@ -289,7 +289,7 @@ public class XOpenALStreamPlayer {
 	 */
 	public boolean setPosition(float position) {
 		try {
-			if (getPosition() > position) {
+			if(position <= 0.0f || getPosition() > position){
 				initStreams();
 			}
 
